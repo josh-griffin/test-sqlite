@@ -11,6 +11,12 @@ import expo.modules.splashscreen.singletons.SplashScreen;
 import expo.modules.splashscreen.SplashScreenImageResizeMode;
 
 public class MainActivity extends ReactActivity {
+
+    static {
+//        System.loadLibrary("native-lib");
+       System.loadLibrary("joshtest");
+    }
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(null);
