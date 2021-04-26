@@ -5,8 +5,9 @@
     "name": "test-sqlite",
     "slug": "test-sqlite",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"],
+    "experiments": {
+      "turboModules": true
+    }
   }
 }

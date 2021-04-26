@@ -1,6 +1,7 @@
 package com.testsqlite;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -12,10 +13,14 @@ import expo.modules.splashscreen.SplashScreenImageResizeMode;
 
 public class MainActivity extends ReactActivity {
 
+
+
     static {
 //        System.loadLibrary("native-lib");
        System.loadLibrary("joshtest");
     }
+
+    public native String stringFromJoshTest();
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,9 @@ public class MainActivity extends ReactActivity {
     // SplashScreen.show(...) has to be called after super.onCreate(...)
     // Below line is handled by '@expo/configure-splash-screen' command and it's discouraged to modify it manually
     SplashScreen.show(this, SplashScreenImageResizeMode.CONTAIN, ReactRootView.class, false);
+
+      Log.v("TAG", stringFromJoshTest());
+
   }
 
 
@@ -43,5 +51,7 @@ public class MainActivity extends ReactActivity {
                 return new RNGestureHandlerEnabledRootView(MainActivity.this);
             }
         };
+
     }
+
 }
