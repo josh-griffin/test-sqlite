@@ -7,27 +7,25 @@ cmake_minimum_required(VERSION 3.10.2)
 
 # Declares and names the project.
 
+set (CMAKE_VERBOSE_MAKEFILE ON)
+set (CMAKE_CXX_STANDARD 11)
+
 project("testsqlite")
 
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
 # You can define multiple libraries, and CMake builds them for you.
 # Gradle automatically packages shared libraries with your APK.
-
-#add_library( # Sets the name of the library.
-#             native-lib
-#
-#             # Sets the library as a shared library.
-#             SHARED
-#
-#             # Provides a relative path to your source file(s).
-#             native-lib.cpp
-#
-#        )
+include_directories(
+        ../../../../../node_modules/react-native/React
+        ../../../../../node_modules/react-native/React/Base
+        ../../../../../node_modules/react-native/ReactCommon/jsi
+)
 
 add_library(
         joshtest
         SHARED
+         ../../../../../node_modules/react-native/ReactCommon/jsi/jsi/jsi.cpp
         ../../../../../cpp/testjosh.cpp
 )
 
@@ -56,6 +54,7 @@ find_library( # Sets the name of the path variable.
 
 target_link_libraries( # Specifies the target library.
                         joshtest
+        android
                        # Links the target library to the log library
                        # included in the NDK.
                        ${log-lib} )

@@ -3,6 +3,12 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
+  Object.keys(global).forEach((key) => console.log("key", key));
+
+  console.log("-------------------------------------------");
+  console.log("global.test", global.test());
+  console.log("-------------------------------------------");
+
   return (
     <View style={styles.container}>
       <Text>{String(!!global.HermesInternal)}</Text>
