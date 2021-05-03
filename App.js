@@ -7,6 +7,7 @@ export default function App() {
 
   console.log("-------------------------------------------");
   console.log("global.test", global.test());
+  console.log("global.open", global.open("josh1"));
   console.log("-------------------------------------------");
 
   return (

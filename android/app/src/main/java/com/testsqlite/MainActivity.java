@@ -15,10 +15,10 @@ public class MainActivity extends ReactActivity {
 
 
 
-    static {
-//        System.loadLibrary("native-lib");
-       System.loadLibrary("joshtest");
-    }
+//    static {
+////        System.loadLibrary("native-lib");
+//       System.loadLibrary("joshtest");
+//    }
 
     public native String stringFromJoshTest();
 
@@ -29,6 +29,7 @@ public class MainActivity extends ReactActivity {
     // Below line is handled by '@expo/configure-splash-screen' command and it's discouraged to modify it manually
     SplashScreen.show(this, SplashScreenImageResizeMode.CONTAIN, ReactRootView.class, false);
 
+      Log.v("TAG", "?");
       Log.v("TAG", stringFromJoshTest());
 
   }

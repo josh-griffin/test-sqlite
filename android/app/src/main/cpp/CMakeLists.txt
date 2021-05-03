@@ -26,6 +26,9 @@ add_library(
         joshtest
         SHARED
          ../../../../../node_modules/react-native/ReactCommon/jsi/jsi/jsi.cpp
+        ../../../../../cpp/sqlite3.h
+        ../../../../../cpp/sqlite3.c
+#        ../../../../../cpp/sqlite_adapter.cpp
         ../../../../../cpp/testjosh.cpp
 )
 
